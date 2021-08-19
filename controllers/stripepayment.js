@@ -1,4 +1,4 @@
-const stripe = require("stripe")(process.env.STRIPEKEY)
+const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY)
 const uuid = require("uuid/v4")
 
 exports.makepayment = (req, res) => {
