@@ -17,6 +17,10 @@ const stripeRoutes = require("./routes/stripepayment")
 
 //DB connection
 mongoose.connect(process.env.DATABASE, {
+    auth: {
+      user: `${process.env.DB_USER}`,
+      password: `${process.env.DB_PASS}`,
+    },
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true
